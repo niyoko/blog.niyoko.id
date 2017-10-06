@@ -1,11 +1,16 @@
 <footer id="footer">
-  <% if (theme.sidebar === 'bottom'){ %>
-    <%- partial('_partial/sidebar') %>
-  <% } %>
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-      <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="license">Isi blog dilisensikan di bawah lisensi <a href="https://creativecommons.org/licenses/by/4.0/deed.id" target="_blank">CC BY 4.0</a>.</div>
+        <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+      </div>
+      <div class="col-12 col-md-6">
+        <ul class="nav">
+          <li><a href="https://github.com/{{ site.github_username }}/{{ site.repo_name }}" target="_blank">Kode Sumber</a></li>
+          <li><a href="https://github.com/{{ site.github_username }}/{{ site.repo_name }}/issues/new" target="_blank">Kritik &amp; Saran</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </footer>
