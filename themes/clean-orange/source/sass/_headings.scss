@@ -1,0 +1,39 @@
+﻿@import "variables";
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+
+  &.heading-primary {
+    color: $brand-primary;
+  }
+}
+
+h1, h2, h3 {
+  margin-top: 0.7rem;
+  margin-bottom: 0.4rem;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.67em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.33em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.78em;
+}

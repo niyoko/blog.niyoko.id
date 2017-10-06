@@ -1,0 +1,26 @@
+﻿@import "variables";
+
+.post-block {
+  &.post-share {
+    margin: 2rem 0 0 0;
+
+    .rrssb-buttons {
+      max-width: 500px;
+
+      li a {
+        text-transform: none;
+      }
+    }
+  }
+
+  &.post-comments {
+    margin: 2rem 0 0 0;
+    border-top: $gray-lighter 1px solid;
+  }
+
+  h3 {
+    font-family: $font-family-base;
+    margin: 1rem 0 1rem 0;
+  }
+}
+

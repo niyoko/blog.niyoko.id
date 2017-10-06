@@ -1,0 +1,68 @@
+﻿@import "variables";
+
+div.body {
+  position: relative;
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 189px;
+}
+
+article.post {
+  h1 {
+    margin-bottom: 1rem;
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  figure {
+    text-align: center;
+    figcaption{
+      font-size: .8em;
+      color: $gray-light;
+      display: block;
+    }
+  }
+
+  .post-meta {
+    font-size: .9rem;
+    margin-bottom: .5rem;
+
+    & > span {
+      display: inline-block;
+      margin-right: .5rem;
+
+      &.tags {
+        & > a {
+          display: inline-block;
+
+          &::after {
+            content: ',';
+            margin-right: .2rem;
+          }
+
+          &:last-child::after {
+            content: '';
+          }
+        }
+      }
+    }
+  }
+
+  &.post-preview {
+    h1 {
+      font-size: 2rem;
+    }
+
+    .excerpt {
+      p {
+        margin-bottom: 0;
+      }
+    }
+    
+    footer {
+      margin-bottom: 1em;
+    }
+  }
+}

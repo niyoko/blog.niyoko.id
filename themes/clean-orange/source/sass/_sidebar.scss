@@ -1,0 +1,67 @@
+﻿@import "variables";
+
+aside.sidebar {
+  h1 {
+    font-size: 1.4rem;
+    font-family: $font-family-sans-serif;
+    margin-top: 2rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    &.archive-tags {
+      font-size: 0;
+      margin-top: 1rem;
+
+      & > li {
+        display: block;
+        margin: 0 0 .3em 1em;         
+        white-space: nowrap;
+        font-size: .875rem;
+        padding: 0;
+
+        a {
+          display: inline-block;
+          background: $brand-primary;
+          color: white;             
+          position: relative;   
+          padding: 0 .7em 0 .4em;    
+          line-height: 2em; 
+          border-radius: 0 $border-radius $border-radius 0;
+             
+          &:hover {
+            text-decoration: none;
+          }
+
+          &::before {
+            position: absolute;
+            top: 0;
+            left: -1em;
+            content: '';
+            width: 0;
+            height: 0;
+            border-color: transparent $brand-primary transparent transparent;
+            border-style: solid;
+            border-width: 1em 1em 1em 0;
+          }
+
+          &::after {
+            position: absolute;
+            top: 50%;
+            left: -.4em;
+            z-index: 2;
+            display: block;
+            content: '';
+            width: .4em;
+            height: .4em;
+            margin-top: -.2em;
+            background: white;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

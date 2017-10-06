@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: niyoko.id
 subtitle:
 description:
 author: John Doe
@@ -72,9 +72,16 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: clean-orange
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false
+  includePaths:
+    - node_modules

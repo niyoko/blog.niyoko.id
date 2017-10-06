@@ -1,0 +1,56 @@
+﻿@import "variables";
+
+#footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: $footer-background-color;
+  color: $footer-font-color;
+  font-size: .9rem;
+  padding: 15px 0;
+
+  a {
+    color: $footer-link-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .license {
+    text-align: center;
+  }
+
+  ul.nav {
+    justify-content: center;
+
+    & > li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 5px;
+      position: relative;
+
+      &::after {
+        content: "|";
+        position: absolute;
+        right: -7px;
+      }
+
+      &:last-child::after {
+        content: "";
+      }
+    }
+  }
+}
+
+@media(min-width: map-get($grid-breakpoints,'md')) {
+  #footer {
+    .license {
+      text-align: left;
+    }
+
+    ul.nav {
+      justify-content: flex-end;
+    }
+  }
+}

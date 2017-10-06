@@ -1,0 +1,191 @@
+﻿@import "variables";
+
+ul.comments {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & > li {
+    clear: both;
+    padding: 10px 0 0 115px;
+    display: block;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &.collapsed {
+      overflow: hidden;
+    }
+
+    ul.comments li ul.reply {
+      margin: 0;
+    }
+
+    .avatar {
+      height: 80px;
+      width: 80px;
+    }
+
+    .letter-rep {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      z-index: -1;
+      display: table;
+
+      & > div {
+        display: table-cell;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        vertical-align: middle;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .img-thumbnail {
+      margin-left: -115px;
+      position: relative;
+      width: 90px;
+      height: 90px;
+      background: transparent;
+      float: left;
+      transition: none;
+    }
+
+    .comment {
+      margin-bottom: 10px;
+    }
+  }
+
+  .comment-arrow {
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #F4F4F4;
+    border-top: 15px solid transparent;
+    height: 0;
+    left: -15px;
+    position: absolute;
+    top: 28px;
+    width: 0;
+  }
+
+  .comment-block {
+    background: #F4F4F4;
+    border-radius: 5px;
+    padding: 20px 20px 30px;
+    position: relative;
+
+    p {
+      font-size: 0.9em;
+      line-height: 21px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .comment-by {
+      display: block;
+      font-size: 1em;
+      line-height: 21px;
+      margin: 0;
+      padding: 0 0 5px 0;
+    }
+
+    .date {
+      color: #999;
+      font-size: 0.9em;
+    }
+  }
+}
+
+
+#comment-form {
+  #comment {
+    padding: 12px 14px;
+  }
+
+  #comment-write {
+    .CodeMirror, .CodeMirror-scroll {
+      min-height: 70px;
+    }
+
+    .CodeMirror {
+      border-radius: 0;
+
+      .CodeMirror-code {
+        .cm-comment {
+          font-family: $font-family-monospace;
+        }
+      }
+    }
+
+    .editor-toolbar {
+      
+      .preview-btn {
+        width: 100px;
+
+        &::after {
+          content: 'Preview';
+          display: inline-block;
+          margin-left: 5px;
+          font-family: $font-family-base;
+        }
+      }
+    }
+  }
+
+  #comment, .CodeMirror {
+    font-family: $font-family-base;
+    font-size: 14px;
+
+    .editor-preview {
+      padding: 13px 14px;
+    }
+  }
+
+  .guest-detail {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+
+    & > div {
+      position: absolute;
+      //bottom: 0;
+    }
+  }
+
+  .comment-row {
+    margin-bottom: 0;
+  }
+
+  .markdown-info {
+    font-size: 12px;
+    color: #666;    
+    margin-top: 5px;
+
+    img {
+      height: 14px;
+      display: inline-block;
+      margin-right: 2px;
+    }
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  &.expanded, &.noscript {
+    .guest-detail {
+      height: 185px;
+    }
+  }
+
+  &.expanded {
+    .guest-detail {
+      transition: height .3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    }
+  }
+}
