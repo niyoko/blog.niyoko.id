@@ -92,7 +92,7 @@ node_sass:
 asset_pipeline:
   revisioning:
     enable: true
-    exclude: ['_redirect', 'favicon.png']
+    exclude: ['_redirect']
   clean_css:
     enable: true
   uglify_js:
