@@ -57,6 +57,9 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+include:
+  - _redirect
+
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
@@ -89,6 +92,7 @@ node_sass:
 asset_pipeline:
   revisioning:
     enable: true
+    exclude: ['_redirect']
   clean_css:
     enable: true
   uglify_js:

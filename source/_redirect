@@ -1,0 +1,6 @@
+# Redirect www visitor
+http://www.niyoko.id/*  https://niyoko.id/:splat 301!
+https://www.niyoko.id/* https://niyoko.id/:splat 301!
+
+# Redirect http visitor
+http://niyoko.id/*  https://niyoko.id/:splat 301!
